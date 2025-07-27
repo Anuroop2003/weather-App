@@ -1,0 +1,79 @@
+:root {
+  --bg: linear-gradient(to right, #89f7fe, #66a6ff);
+  --text: #000;
+  --card-bg: #ffffffdd;
+  --label-color: #333;
+}
+
+[data-theme='dark'] {
+  --bg: linear-gradient(to right, #1f1c2c, #928dab);
+  --text: #fff;
+  --card-bg: rgba(0, 0, 0, 0.7);
+  --label-color: #ddd;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: all 0.3s ease;
+  color: var(--text);
+}
+
+.weather-container {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.weather-icon {
+  width: 80px;
+}
+
+.btn, .form-control, .form-select {
+  border-radius: 10px;
+}
+
+.forecast-card {
+  background-color: #f1f9ff;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  margin: 8px 0;
+  transition: background-color 0.3s;
+}
+
+[data-theme='dark'] .forecast-card {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.forecast-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--label-color);
+}
+
+footer {
+  color: var(--text);
+}
